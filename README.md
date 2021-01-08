@@ -54,7 +54,7 @@ Value of the `Cache-Control` header that is applied to the response even if ther
 
 __`defaultKey`__
 
-If a call is made to a url ending in `/`, and this option is present its value is used as the s3 key name. For example, you may wish to allow users to access `/index.html` when calling `/` on a route. 
+If a call is made to a url ending in `/`, and this option is present its value is used as the s3 key name. For example, you may wish to allow users to access `/index.html` when calling `/` on a route.
 
 
 ### HTTP Cache Headers
@@ -98,13 +98,10 @@ Now images can be declared in views like so:
 ### Listing objects
 It's also possible to return a JSON listing of all the keys by making a request ending with a trailing slash. For the sample above, issuing a request to `/media/images/` will return: `['logo.png', 'background.jpg']`. This is the default behavior when `defaultKey` is false.
 
-### Default Key 
-If you don't need list objects when making requests ending in a trailing slash, you can instead use a default s3 key by setting the parameter `defaultKey` in options. For example, if `defaultKey` is set to `index.html`, calls to urls like `/media` will return to object `/media/index.html`. 
+### Default Key
+If you don't need list objects when making requests ending in a trailing slash, you can instead use a default s3 key by setting the parameter `defaultKey` in options. For example, if `defaultKey` is set to `index.html`, calls to urls like `/media` will return to object `/media/index.html`.
 
 ## License
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
-[travis-image]: https://img.shields.io/travis/4front/s3-proxy.svg?style=flat
-[travis-url]: https://travis-ci.org/4front/s3-proxy
-[coveralls-image]: https://img.shields.io/coveralls/4front/s3-proxy.svg?style=flat
-[coveralls-url]: https://coveralls.io/r/4front/s3-proxy?branch=master
+Modifications Copyright (C) 2021 iScout
